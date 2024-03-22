@@ -40,7 +40,7 @@ public class FacultyController {
         service.delete(id);
     }
     @GetMapping("/filter/{color}")
-    public List<Faculty> get(@PathVariable String color){
+    public List<Faculty> get(@RequestParam String color){
         return service.findColor(color);
     }
     @GetMapping("/filter")
