@@ -15,7 +15,7 @@ class Student {
     private int age;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_факультета")
+    @JoinColumn(name = "id_faculty")
     private Faculty faculty;
     public Student(){}
     public Student(Long id, String name, int age) {
