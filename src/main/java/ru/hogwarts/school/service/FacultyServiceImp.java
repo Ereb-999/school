@@ -18,7 +18,6 @@ public class FacultyServiceImp implements FacultyService{
 
     public Faculty createFaculty(Faculty faculty) {return facultyRepository.save(faculty);}
 
-
     @Override
     public Faculty get(Long id) {
        return facultyRepository.findById(id).orElseThrow(ExceptionFaculty::new);
