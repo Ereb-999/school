@@ -1,6 +1,6 @@
 package ru.hogwarts.school.controller;
 
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.hogwarts.school.model.Faculty;
@@ -19,32 +19,34 @@ public class FacultyController {
         this.service = service;
     }
 
+    @PostMapping
+    public ResponseEntity<Faculty> create(@RequestBody Faculty faculty){
+      return ResponseEntity.ok(service.createFaculty(faculty));
+    }
+    @GetMapping("{id}")
+    public ResponseEntity<Faculty> get(@PathVariable Long id){
+        return ResponseEntity.ok(service.get(id));
+    }
     @GetMapping
-    public Faculty create(@RequestBody Faculty faculty){
-        return service.createFaculty(faculty);
+    public ResponseEntity<Collection<Faculty>> getAll(){
+        return (ResponseEntity<Collection<Faculty>>)(service.getAll());
     }
-    @GetMapping("/{id}")
-    public Faculty get(@PathVariable Long id){
-        return service.get(id);
-    }
-    @GetMapping
-    public Collection<Faculty> getAll(){
-        return service.getAll();
-    }
-    @GetMapping("/{id}")
-    public Faculty update(@RequestBody Faculty faculty, @PathVariable Long id){
-        return service.update(faculty, id);
+    @GetMapping("update/{id}")
+    public ResponseEntity<Faculty> update(@RequestBody Faculty faculty, @PathVariable Long id){
+        return  ResponseEntity.ok(service.update(faculty, id));
     }
     @DeleteMapping("{id}")
-    public void delete(@RequestParam long id){
+    public ResponseEntity<Void> delete(@PathVariable Long id){
         service.delete(id);
+        return ResponseEntity.ok().build();
     }
+
     @GetMapping("/filter/{color}")
-    public List<Faculty> get(@RequestParam String color){
-        return service.findColor(color);
+    public ResponseEntity<List<Faculty>> get(@PathVariable String color){
+        return  ResponseEntity.ok(service.findColor(color));
     }
-    @GetMapping("/filter")
-    public List<Faculty> getFindAllByColor(@RequestParam String name, @RequestParam String color){
-        return service.findByColorAndName(name, color);
+    @GetMapping("filter")
+    public  ResponseEntity<List<Faculty>> getFindAllByColor(@RequestParam String name, @RequestParam String color){
+        return  ResponseEntity.ok(service.findByColorAndName(name, color));
     }
 }

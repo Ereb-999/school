@@ -8,7 +8,7 @@ public interface StudentService {
     Student add(Student student);
     Student find(long id);
     Collection<Student> findAge(Integer minAge, Integer maxAge);
-    Student edit(long id, Student student);
+    Student edit(Student student);
     Collection<Student> getAll();
     void delete(long id);
 

@@ -19,6 +19,7 @@ public class StudentServiceImp implements StudentService{
 
     @Override
     public Student add(Student student) {
+        student.setId(null);
         return studentRepository.save(student);
     }
 
@@ -28,8 +29,7 @@ public class StudentServiceImp implements StudentService{
     }
 
     @Override
-    public Student edit(long id, Student student) {
-        studentRepository.findById(id).orElseThrow(ExceptionStudent::new);
+    public Student edit(Student student) {
         return studentRepository.save(student);
     }
 

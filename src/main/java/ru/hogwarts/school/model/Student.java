@@ -40,7 +40,7 @@ class Student {
         return faculty;
     }
 
-    public void setId(long l) {
+    public void setId(Long l) {
         this.id = id;
     }
 

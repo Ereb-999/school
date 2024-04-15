@@ -19,29 +19,40 @@ public class StudentController {
     }
 
     @GetMapping
-    public Collection<Student> studentsInform(){
-        return service.getAll();
+    public ResponseEntity<Collection<Student>> studentsInform(){
+        return ResponseEntity.ok(service.getAll());
     }
-    @GetMapping("/{id}")
-    public Student studentsInform(@PathVariable Long id){
-        return service.find(id);
+    @GetMapping("{id}")
+    public ResponseEntity<Student> studentsInform(@PathVariable Long id){
+        Student student = service.find(id);
+        if (student == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(service.find(id));
     }
     @PostMapping
-    public ResponseEntity<Student> сcreate(@RequestBody Student student){
+    public ResponseEntity<Student> сreate(@RequestBody Student student){
        service.add(student);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
-    @PutMapping("/{id}")
-    public Student edit(@RequestBody Student student, @PathVariable Long id){
-        return service.edit(id, student);
+    @PutMapping("/edit/{id}")
+    public ResponseEntity<Student> edit(@RequestBody Student student){
+        Student editStudent = service.edit(student);
+        if (editStudent == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+        return new ResponseEntity<>(editStudent, HttpStatus.OK);
     }
-    @PostMapping("{id}")
-    public void delete(@RequestParam long id){
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
         service.delete(id);
+        return ResponseEntity.ok().build();
     }
+
     @GetMapping("/getAge")
-    public Collection<Student> getAge(@RequestParam Integer minAge, @RequestParam Integer maxAge){
-        return service.findAge(minAge, maxAge);
+    public ResponseEntity<Collection<Student>> getAge(@RequestParam Integer minAge, @RequestParam Integer maxAge){
+        return ResponseEntity.ok(service.findAge(minAge, maxAge));
     }
 
 }

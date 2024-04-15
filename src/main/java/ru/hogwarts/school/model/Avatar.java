@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Lob;
 import jakarta.persistence.OneToOne;
-import nonapi.io.github.classgraph.json.Id;
+import jakarta.persistence.Id;
 
 import java.util.Arrays;
 import java.util.Objects;
