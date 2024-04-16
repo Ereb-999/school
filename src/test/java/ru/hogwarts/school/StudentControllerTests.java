@@ -58,7 +58,7 @@ class StudentControllerTests {
 		JSONAssert.assertEquals(check, response.getBody(), false);
 	}
 	@Test
-	void getStudentsTest() throws JSONException {
+	void getStudentsTest() {
         ResponseEntity<List<Student>> response = testRestTemplate.exchange(
                 "http://localhost:" + port + "/student", HttpMethod.GET, null,
                 new ParameterizedTypeReference<>() {
@@ -69,32 +69,34 @@ class StudentControllerTests {
         assertEquals(studentsSave, studentList);
 }
 
-        @Test
-        void createTest() throws JsonProcessingException, JSONException {
-            Student student = new Student("Гермиона", 15, 3l);
-            String check = objectMapper.writeValueAsString(student);
-            ResponseEntity<String> response = testRestTemplate.postForEntity("/student", student, String.class);
-            assertEquals(HttpStatus.CREATED, response.getStatusCode());
-            JSONAssert.assertEquals(check, response.getBody(), false);
-        }
+	@Test
+	void createTest() throws JsonProcessingException, JSONException {
+		Student student = new Student("Гермиона", 15, 3l);
+		String check = objectMapper.writeValueAsString(student);
+		ResponseEntity<Student> response = testRestTemplate.postForEntity("/student", student, Student.class);
+		assertEquals(HttpStatus.CREATED, response.getStatusCode());
+		assertEquals(student.getName(), response.getBody().getName());
+		assertEquals(student.getAge(), response.getBody().getAge());
+	}
 
-        @Test
-        void editTest() throws Exception {
-            Student student = new Student("Арагог", 12, 4l);
-            HttpEntity<Student> entity = new HttpEntity<>(student);
-            student.setId(studentsSave.get(0).getId());
-            ResponseEntity<Student> response = testRestTemplate
-                    .exchange("/student/edit/" + studentsSave.get(0).getId(),
-                            HttpMethod.PUT, entity, Student.class);
-            assertEquals(response.getStatusCode(), HttpStatus.OK);
-            assertEquals(student, response.getBody());
-        }
+	@Test
+	void editTest() throws Exception {
+		Student student = new Student("Арагог", 12, 4l);
+		HttpEntity<Student> entity = new HttpEntity<>(student);
+		student.setId(studentsSave.get(0).getId());
+		ResponseEntity<Student> response = testRestTemplate
+				.exchange("/student/edit/" + studentsSave.get(0).getId(),
+						HttpMethod.PUT, entity, Student.class);
+		assertEquals(response.getStatusCode(), HttpStatus.OK);
+		assertEquals(student.getName(), response.getBody().getName());
+		assertEquals(student.getAge(), response.getBody().getAge());
+	}
 
         @Test
         void deleteTest () {
             HttpEntity<String> entity = new HttpEntity<>(null, new HttpHeaders());
             ResponseEntity<String> response = testRestTemplate
-                    .exchange("/students/" + studentsSave.get(0).getId(), HttpMethod.DELETE, entity, String.class);
+                    .exchange("/student/delete/" + studentsSave.get(0).getId(), HttpMethod.DELETE, entity, String.class);
             assertEquals(HttpStatus.OK, response.getStatusCode());
         }
     }

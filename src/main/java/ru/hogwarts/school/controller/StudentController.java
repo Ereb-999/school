@@ -22,6 +22,7 @@ public class StudentController {
     public ResponseEntity<Collection<Student>> studentsInform(){
         return ResponseEntity.ok(service.getAll());
     }
+
     @GetMapping("{id}")
     public ResponseEntity<Student> studentsInform(@PathVariable Long id){
         Student student = service.find(id);
