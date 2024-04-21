@@ -1,0 +1,13 @@
+CREATE TABLE cars(
+id INTEGER PRIMARY KEY,
+brend VARCHAR,
+tip VARCHAR,
+cost INTEGER);
+
+CREATE TANLE users(
+id INTEGER PRIMARY KEY,
+name VARCHAR,
+age INTEGER,
+has_lincense BOOLEAN,
+car_id INTEGER REFERENCES cars(id)
+);
