@@ -1,3 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: liquibase/migrationScriptIndex1.sql

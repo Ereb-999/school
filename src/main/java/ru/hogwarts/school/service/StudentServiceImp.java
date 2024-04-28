@@ -8,6 +8,7 @@ import ru.hogwarts.school.model.Student;
 import ru.hogwarts.school.repository.StudentRepository;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -57,6 +58,25 @@ public class StudentServiceImp implements StudentService{
         logger.debug("Input error to the method (delete) [id]: ", id);
         studentRepository.deleteById(id);
     }
-
+    @Override
+    public Collection<String> getNameFilterA(){
+        logger.debug("Input error to the method (getNameFilterA)");
+        return studentRepository.findAll()
+                .stream()
+                .map(Student::getName)
+                .map(String::toUpperCase)
+                .filter(s->s.startsWith("А"))
+                .sorted()
+                .collect(Collectors.toList());
+    }
+    @Override
+    public Double getStudentSortingAverageAge(){
+        logger.debug("Input error to the method (getStudentSortingAverageAge)");
+        return studentRepository.findAll()
+                .stream()
+                .mapToInt(Student::getAge)
+                .average()
+                .orElse(0);
+    }
 
 }
