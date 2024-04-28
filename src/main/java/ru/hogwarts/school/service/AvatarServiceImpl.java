@@ -1,6 +1,8 @@
 package ru.hogwarts.school.service;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,6 +27,7 @@ import static java.nio.file.StandardOpenOption.CREATE_NEW;
 public class AvatarServiceImpl implements AvatarService{
     @Value("${path.to.avatars.folder}")
     private String avatarLic;
+    Logger logger = LoggerFactory.getLogger(AvatarServiceImpl.class);
     private final AvatarRepository avatarRepository;
     private final StudentRepository studentRepository;
 
@@ -65,25 +68,30 @@ public class AvatarServiceImpl implements AvatarService{
         ){
             bIS.transferTo(boS);
         }
+        logger.debug("Input error to the method (uploadAvatar) [studentId, failAvatar]: ", studentId, failAvatar);
         Avatar avatar = findAvatar(studentId);
         avatar.setStudent(student);
         avatar.setFilePath(pathFile.toString());
         avatar.setFileSize(failAvatar.getSize());
         avatar.setMediaType(failAvatar.getContentType());
         avatar.setData(generateDataFor(pathFile));
+
         avatarRepository.save(avatar);
     }
 
     @Override
     public Avatar findAvatar(Long studentId) {
+        logger.debug("Input error to the method (findAvatar) [studentId]: ", studentId);
         return avatarRepository.findByStudentId(studentId).orElse(new Avatar());
     }
+
     private String getExtensions(String fileAvatarTheName){
         return fileAvatarTheName.substring(fileAvatarTheName.lastIndexOf(".") + 1);
     }
 
     public Page<Avatar> getAllAvatar(Integer page, Integer size){
         Pageable pageable = PageRequest.of(page, size);
+        logger.debug("Input error to the method (getAllAvatar) [page, size]: ", page, size);
         return avatarRepository.findAll(pageable);
     }
 
