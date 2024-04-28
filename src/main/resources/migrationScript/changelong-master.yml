@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: migrationScript/migrationScriptIndex1.sql

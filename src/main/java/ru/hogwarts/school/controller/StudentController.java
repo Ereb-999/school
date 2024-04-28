@@ -56,4 +56,13 @@ public class StudentController {
         return ResponseEntity.ok(service.findAge(minAge, maxAge));
     }
 
+    @GetMapping("/sortingA")
+    public ResponseEntity<Collection<String>> getNameStudentSortingA(){
+        Collection<String> stringCollection = service.getNameFilterA();
+        return ResponseEntity.ok(stringCollection);
+    }
+
+    @GetMapping("/StudentSortingAverageAge")
+    public Double studentSortingAverageAge(){return service.getStudentSortingAverageAge();}
+
 }

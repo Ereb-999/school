@@ -49,4 +49,9 @@ public class FacultyController {
     public  ResponseEntity<List<Faculty>> getFindAllByColor(@RequestParam String name, @RequestParam String color){
         return  ResponseEntity.ok(service.findByColorAndName(name, color));
     }
+
+    @GetMapping("/maxNameFacult")
+    public String getFacultyMaxNameLength(){
+        return service.getMaxNameFacultyLength();
+    }
 }

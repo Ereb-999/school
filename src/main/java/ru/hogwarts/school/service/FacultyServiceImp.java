@@ -2,13 +2,16 @@ package ru.hogwarts.school.service;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import ru.hogwarts.school.exception.ExceptionFaculty;
 import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.repository.FacultyRepository;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -36,6 +39,17 @@ public class FacultyServiceImp implements FacultyService{
         logger.debug("Input error to the method (update) [faculty, id]: ", faculty, id);
         facultyRepository.findById(id).orElseThrow(ExceptionFaculty::new);
         return facultyRepository.save(faculty);
+    }
+
+
+    public String getMaxNameFacultyLength(){
+        logger.debug("Input error to the method (getMaxNameFacultyLength)");
+        return facultyRepository
+                .findAll()
+                .stream()
+                .map(Faculty::getName)
+                .max(Comparator.comparing(String::length))
+                .orElse("");
     }
 
     @Override
