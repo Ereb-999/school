@@ -13,5 +13,8 @@ public interface StudentService {
     void delete(long id);
     Collection<String> getNameFilterA();
     Double getStudentSortingAverageAge();
+    void getStudentParallel() throws InterruptedException;
+    void getStudentSync() throws InterruptedException;
+
 }
 

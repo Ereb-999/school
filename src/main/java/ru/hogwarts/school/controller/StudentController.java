@@ -65,4 +65,14 @@ public class StudentController {
     @GetMapping("/StudentSortingAverageAge")
     public Double studentSortingAverageAge(){return service.getStudentSortingAverageAge();}
 
+    @GetMapping("/print-parallel")
+    public void getStudentParallel() throws InterruptedException{
+        service.getStudentParallel();
+    }
+    @GetMapping("/print-synchronized")
+    public void getStudentSync() throws InterruptedException{
+        service.getStudentSync();
+
+    }
+
 }

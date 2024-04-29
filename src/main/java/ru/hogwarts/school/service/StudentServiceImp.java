@@ -21,6 +21,7 @@ public class StudentServiceImp implements StudentService{
         this.studentRepository = studentRepository;
     }
 
+
     @Override
     public Student add(Student student) {
         student.setId(null);
@@ -77,6 +78,46 @@ public class StudentServiceImp implements StudentService{
                 .mapToInt(Student::getAge)
                 .average()
                 .orElse(0);
+    }
+
+    private void printNameStudent(Long id){
+        String studentName = studentRepository.getById(id).getName();
+        System.out.println(studentName);
+    }
+    private synchronized void printSync(Long id){
+        String studentName = studentRepository.getById(id).getName();
+        System.out.println(studentName);
+    }
+
+    public void getStudentParallel(){
+        Thread thread1 = new Thread(() ->{
+          printNameStudent(6L);
+            printNameStudent(5L);
+        });
+        thread1.setName("Thread: 1 ");
+        Thread thread2 = new Thread(() ->{
+            printNameStudent(1L);
+            printNameStudent(2L);
+        });
+        thread1.setName("Thread: 2 ");
+        thread1.start();
+        thread2.start();
+        printNameStudent(3l);
+        printNameStudent(4l);
+    }
+    public void getStudentSync(){
+        Thread thread = new Thread(() ->{
+           printSync(3L);
+           printSync(4L);
+        });
+        Thread thread2 = new Thread(() ->{
+            printSync(5L);
+            printSync(6L);
+        });
+        printSync(1L);
+        printSync(2L);
+        thread.start();
+        thread2.start();
     }
 
 }
