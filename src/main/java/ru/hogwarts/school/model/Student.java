@@ -5,8 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-public
-class Student {
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

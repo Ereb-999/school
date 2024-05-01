@@ -1,0 +1,442 @@
+2024-04-29T11:34:34.391+04:00  INFO 12072 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 12072 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T11:34:34.425+04:00 DEBUG 12072 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T11:34:34.431+04:00  INFO 12072 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T11:34:40.485+04:00  INFO 12072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T11:34:40.884+04:00  INFO 12072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 340 ms. Found 3 JPA repository interfaces.
+2024-04-29T11:34:45.297+04:00  INFO 12072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T11:34:45.337+04:00  INFO 12072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T11:34:45.338+04:00  INFO 12072 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T11:34:45.617+04:00  INFO 12072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T11:34:45.620+04:00  INFO 12072 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10120 ms
+2024-04-29T11:34:48.209+04:00  INFO 12072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T11:34:49.628+04:00  INFO 12072 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7edb6fca
+2024-04-29T11:34:49.633+04:00  INFO 12072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T11:34:50.280+04:00  INFO 12072 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T11:34:51.235+04:00  INFO 12072 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T11:34:51.241+04:00  WARN 12072 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T11:34:51.243+04:00  INFO 12072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T11:34:51.373+04:00  INFO 12072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T11:34:51.381+04:00  INFO 12072 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T11:34:51.412+04:00  INFO 12072 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T11:34:51.966+04:00 ERROR 12072 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T11:45:45.504+04:00  INFO 25800 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 25800 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T11:45:45.511+04:00 DEBUG 25800 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T11:45:45.513+04:00  INFO 25800 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T11:45:48.528+04:00  INFO 25800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T11:45:48.713+04:00  INFO 25800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 3 JPA repository interfaces.
+2024-04-29T11:45:52.119+04:00  INFO 25800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T11:45:52.159+04:00  INFO 25800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T11:45:52.160+04:00  INFO 25800 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T11:45:52.655+04:00  INFO 25800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T11:45:52.657+04:00  INFO 25800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6810 ms
+2024-04-29T11:45:53.320+04:00  INFO 25800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T11:45:54.059+04:00  INFO 25800 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17043b04
+2024-04-29T11:45:54.064+04:00  INFO 25800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T11:45:54.750+04:00  INFO 25800 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T11:45:55.403+04:00  INFO 25800 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T11:45:55.406+04:00  WARN 25800 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T11:45:55.407+04:00  INFO 25800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T11:45:55.468+04:00  INFO 25800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T11:45:55.477+04:00  INFO 25800 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T11:45:55.511+04:00  INFO 25800 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T11:45:55.561+04:00 ERROR 25800 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T15:24:42.906+04:00  INFO 4124 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 4124 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T15:24:42.909+04:00 DEBUG 4124 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T15:24:42.911+04:00  INFO 4124 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T15:24:48.643+04:00  INFO 4124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T15:24:48.990+04:00  INFO 4124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 318 ms. Found 3 JPA repository interfaces.
+2024-04-29T15:24:56.875+04:00  INFO 4124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T15:24:56.922+04:00  INFO 4124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T15:24:56.923+04:00  INFO 4124 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T15:24:57.673+04:00  INFO 4124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T15:24:57.673+04:00  INFO 4124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13458 ms
+2024-04-29T15:24:59.070+04:00  INFO 4124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T15:25:00.348+04:00  INFO 4124 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b90fee4
+2024-04-29T15:25:00.351+04:00  INFO 4124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T15:25:01.522+04:00  INFO 4124 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T15:25:02.564+04:00  INFO 4124 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T15:25:02.584+04:00  WARN 4124 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T15:25:02.584+04:00  INFO 4124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T15:25:02.800+04:00  INFO 4124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T15:25:02.874+04:00  INFO 4124 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T15:25:03.091+04:00  INFO 4124 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T15:25:03.206+04:00 ERROR 4124 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T15:46:48.480+04:00  INFO 10720 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 10720 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T15:46:48.550+04:00 DEBUG 10720 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T15:46:48.553+04:00  INFO 10720 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T15:46:53.392+04:00  INFO 10720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T15:46:53.681+04:00  INFO 10720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 258 ms. Found 3 JPA repository interfaces.
+2024-04-29T15:46:57.373+04:00  INFO 10720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T15:46:57.404+04:00  INFO 10720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T15:46:57.405+04:00  INFO 10720 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T15:46:57.979+04:00  INFO 10720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T15:46:57.980+04:00  INFO 10720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8783 ms
+2024-04-29T15:46:59.072+04:00  INFO 10720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T15:46:59.853+04:00  INFO 10720 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a6e4897
+2024-04-29T15:46:59.856+04:00  INFO 10720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T15:47:00.533+04:00  INFO 10720 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T15:47:01.048+04:00  INFO 10720 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T15:47:01.052+04:00  WARN 10720 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T15:47:01.053+04:00  INFO 10720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T15:47:01.322+04:00  INFO 10720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T15:47:01.398+04:00  INFO 10720 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T15:47:01.695+04:00  INFO 10720 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T15:47:01.796+04:00 ERROR 10720 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T15:51:58.068+04:00  INFO 3732 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 3732 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T15:51:58.072+04:00 DEBUG 3732 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T15:51:58.074+04:00  INFO 3732 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T15:52:03.634+04:00  INFO 3732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T15:52:04.071+04:00  INFO 3732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 413 ms. Found 3 JPA repository interfaces.
+2024-04-29T15:52:08.267+04:00  INFO 3732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T15:52:08.319+04:00  INFO 3732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T15:52:08.320+04:00  INFO 3732 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T15:52:09.218+04:00  INFO 3732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T15:52:09.219+04:00  INFO 3732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10341 ms
+2024-04-29T15:52:10.478+04:00  INFO 3732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T15:52:11.307+04:00  INFO 3732 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67cffead
+2024-04-29T15:52:11.312+04:00  INFO 3732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T15:52:12.687+04:00  INFO 3732 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T15:52:13.975+04:00  INFO 3732 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T15:52:13.980+04:00  WARN 3732 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:/migrationScript/changelog-master.yml does not exist
+2024-04-29T15:52:13.982+04:00  INFO 3732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T15:52:14.296+04:00  INFO 3732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T15:52:14.305+04:00  INFO 3732 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T15:52:14.358+04:00  INFO 3732 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T15:52:14.599+04:00 ERROR 3732 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:/migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T15:52:33.625+04:00  INFO 6804 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 6804 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T15:52:33.638+04:00 DEBUG 6804 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T15:52:33.642+04:00  INFO 6804 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T15:52:38.135+04:00  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T15:52:38.432+04:00  INFO 6804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 266 ms. Found 3 JPA repository interfaces.
+2024-04-29T15:52:42.883+04:00  INFO 6804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T15:52:42.941+04:00  INFO 6804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T15:52:42.948+04:00  INFO 6804 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T15:52:43.913+04:00  INFO 6804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T15:52:43.913+04:00  INFO 6804 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9317 ms
+2024-04-29T15:52:45.056+04:00  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T15:52:45.887+04:00  INFO 6804 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68b734a8
+2024-04-29T15:52:45.913+04:00  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T15:52:46.923+04:00  INFO 6804 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T15:52:47.972+04:00  INFO 6804 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T15:52:47.978+04:00  WARN 6804 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:/migrationScript/changelog-master.yml does not exist
+2024-04-29T15:52:47.979+04:00  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T15:52:48.176+04:00  INFO 6804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T15:52:48.208+04:00  INFO 6804 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T15:52:48.337+04:00  INFO 6804 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T15:52:48.447+04:00 ERROR 6804 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:/migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T16:00:35.906+04:00  INFO 14788 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 14788 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T16:00:35.909+04:00 DEBUG 14788 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T16:00:35.913+04:00  INFO 14788 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T16:00:43.258+04:00  INFO 14788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T16:00:43.807+04:00  INFO 14788 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 523 ms. Found 3 JPA repository interfaces.
+2024-04-29T16:00:54.772+04:00  INFO 14788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T16:00:54.961+04:00  INFO 14788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T16:00:54.962+04:00  INFO 14788 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T16:00:55.704+04:00  INFO 14788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T16:00:55.705+04:00  INFO 14788 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 19011 ms
+2024-04-29T16:00:58.845+04:00  INFO 14788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T16:00:59.739+04:00  INFO 14788 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@63f6bed1
+2024-04-29T16:00:59.743+04:00  INFO 14788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T16:01:00.841+04:00  INFO 14788 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T16:01:01.639+04:00  INFO 14788 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T16:01:01.645+04:00  WARN 14788 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:/migrationScript/changelog-master.yml does not exist
+2024-04-29T16:01:01.646+04:00  INFO 14788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T16:01:02.609+04:00  INFO 14788 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T16:01:02.705+04:00  INFO 14788 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T16:01:02.751+04:00  INFO 14788 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T16:01:02.981+04:00 ERROR 14788 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:/migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T16:21:28.844+04:00  INFO 14704 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 14704 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T16:21:28.851+04:00 DEBUG 14704 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T16:21:28.856+04:00  INFO 14704 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T16:21:34.039+04:00  INFO 14704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T16:21:34.296+04:00  INFO 14704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 226 ms. Found 3 JPA repository interfaces.
+2024-04-29T16:21:38.989+04:00  INFO 14704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T16:21:39.043+04:00  INFO 14704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T16:21:39.043+04:00  INFO 14704 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T16:21:39.840+04:00  INFO 14704 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T16:21:39.841+04:00  INFO 14704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9997 ms
+2024-04-29T16:21:40.006+04:00  INFO 14704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T16:21:41.166+04:00  INFO 14704 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f8a6243
+2024-04-29T16:21:41.171+04:00  INFO 14704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T16:21:41.192+04:00  INFO 14704 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/mDd'
+2024-04-29T16:21:43.065+04:00  INFO 14704 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T16:21:44.039+04:00  INFO 14704 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T16:21:44.106+04:00  WARN 14704 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T16:21:44.107+04:00  INFO 14704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T16:21:44.259+04:00  INFO 14704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T16:21:44.272+04:00  INFO 14704 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T16:21:44.344+04:00  INFO 14704 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T16:21:44.457+04:00 ERROR 14704 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T16:41:32.347+04:00  INFO 12544 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 12544 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T16:41:32.423+04:00 DEBUG 12544 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T16:41:32.426+04:00  INFO 12544 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T16:41:37.024+04:00  INFO 12544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T16:41:37.386+04:00  INFO 12544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 279 ms. Found 3 JPA repository interfaces.
+2024-04-29T16:41:41.243+04:00  INFO 12544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T16:41:41.285+04:00  INFO 12544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T16:41:41.286+04:00  INFO 12544 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T16:41:42.375+04:00  INFO 12544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T16:41:42.377+04:00  INFO 12544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9325 ms
+2024-04-29T16:41:42.574+04:00  INFO 12544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T16:41:43.593+04:00  INFO 12544 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64942607
+2024-04-29T16:41:43.617+04:00  INFO 12544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T16:41:43.654+04:00  INFO 12544 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/mDd'
+2024-04-29T16:41:45.421+04:00  INFO 12544 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T16:41:46.233+04:00  INFO 12544 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T16:41:46.238+04:00  WARN 12544 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T16:41:46.239+04:00  INFO 12544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T16:41:46.274+04:00  INFO 12544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T16:41:46.295+04:00  INFO 12544 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T16:41:46.351+04:00  INFO 12544 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T16:41:46.437+04:00 ERROR 12544 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T16:44:32.811+04:00  INFO 7604 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 7604 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T16:44:32.824+04:00 DEBUG 7604 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T16:44:32.827+04:00  INFO 7604 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T16:44:38.234+04:00  INFO 7604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T16:44:38.584+04:00  INFO 7604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 323 ms. Found 3 JPA repository interfaces.
+2024-04-29T16:44:44.835+04:00  INFO 7604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T16:44:44.888+04:00  INFO 7604 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T16:44:44.889+04:00  INFO 7604 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T16:44:45.480+04:00  INFO 7604 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T16:44:45.482+04:00  INFO 7604 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11938 ms
+2024-04-29T16:44:45.618+04:00  INFO 7604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T16:44:46.860+04:00  INFO 7604 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@713ec32d
+2024-04-29T16:44:46.864+04:00  INFO 7604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T16:44:46.884+04:00  INFO 7604 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/mDd'
+2024-04-29T16:44:48.662+04:00  INFO 7604 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T16:44:49.339+04:00  INFO 7604 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T16:44:49.345+04:00  WARN 7604 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T16:44:49.345+04:00  INFO 7604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T16:44:49.403+04:00  INFO 7604 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T16:44:49.424+04:00  INFO 7604 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T16:44:49.474+04:00  INFO 7604 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T16:44:49.668+04:00 ERROR 7604 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T16:59:16.885+04:00  INFO 16320 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 16320 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T16:59:16.895+04:00 DEBUG 16320 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T16:59:16.914+04:00  INFO 16320 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T16:59:32.942+04:00  INFO 16320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T16:59:34.040+04:00  INFO 16320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 983 ms. Found 3 JPA repository interfaces.
+2024-04-29T17:20:36.128+04:00  INFO 828 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 828 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T17:20:36.133+04:00 DEBUG 828 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T17:20:36.134+04:00  INFO 828 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T17:20:43.086+04:00  INFO 828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T17:20:43.426+04:00  INFO 828 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 286 ms. Found 3 JPA repository interfaces.
+2024-04-29T17:20:50.182+04:00  INFO 828 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T17:20:50.236+04:00  INFO 828 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T17:20:50.237+04:00  INFO 828 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T17:20:51.069+04:00  INFO 828 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T17:20:51.070+04:00  INFO 828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13981 ms
+2024-04-29T17:20:51.196+04:00  INFO 828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T17:20:53.034+04:00  INFO 828 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ccac6f4
+2024-04-29T17:20:53.039+04:00  INFO 828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T17:20:53.061+04:00  INFO 828 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/mDd'
+2024-04-29T17:20:56.868+04:00  INFO 828 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T17:20:57.698+04:00  INFO 828 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T17:20:57.703+04:00  WARN 828 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T17:20:57.704+04:00  INFO 828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T17:20:57.857+04:00  INFO 828 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T17:20:57.867+04:00  INFO 828 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T17:20:57.990+04:00  INFO 828 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T17:20:58.200+04:00 ERROR 828 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-04-29T21:40:03.489+04:00  INFO 9888 --- [main] ru.hogwarts.school.SchoolApplication     : Starting SchoolApplication using Java 17.0.9 with PID 9888 (C:\Users\user\IdeaProjects\school\target\classes started by user in C:\Users\user\IdeaProjects\school)
+2024-04-29T21:40:03.498+04:00 DEBUG 9888 --- [main] ru.hogwarts.school.SchoolApplication     : Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-04-29T21:40:03.501+04:00  INFO 9888 --- [main] ru.hogwarts.school.SchoolApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-04-29T21:40:10.735+04:00  INFO 9888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-29T21:40:11.265+04:00  INFO 9888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 289 ms. Found 3 JPA repository interfaces.
+2024-04-29T21:40:16.741+04:00  INFO 9888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-29T21:40:16.782+04:00  INFO 9888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-29T21:40:16.783+04:00  INFO 9888 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-29T21:40:17.555+04:00  INFO 9888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-29T21:40:17.557+04:00  INFO 9888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13058 ms
+2024-04-29T21:40:17.848+04:00  INFO 9888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-29T21:40:19.556+04:00  INFO 9888 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e60f18
+2024-04-29T21:40:19.560+04:00  INFO 9888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-29T21:40:19.614+04:00  INFO 9888 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/mDd'
+2024-04-29T21:40:22.285+04:00  INFO 9888 --- [main] liquibase.database                       : Set default schema name to public
+2024-04-29T21:40:23.613+04:00  INFO 9888 --- [main] liquibase.command                        : Command execution complete
+2024-04-29T21:40:23.639+04:00  WARN 9888 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.ChangeLogParseException: classpath:migrationScript/changelog-master.yml does not exist
+2024-04-29T21:40:23.642+04:00  INFO 9888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-29T21:40:23.775+04:00  INFO 9888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-29T21:40:23.788+04:00  INFO 9888 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-04-29T21:40:23.984+04:00  INFO 9888 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-29T21:40:24.083+04:00 ERROR 9888 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:migrationScript/changelog-master.yml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+

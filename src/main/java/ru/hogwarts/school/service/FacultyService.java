@@ -11,6 +11,6 @@ public interface FacultyService {
     List<Faculty> findColor(String color);
     Collection<Faculty> getAll();
     void delete(Long id);
-
+    String getMaxNameFacultyLength();
     List<Faculty> findByColorAndName(String name, String color);
 }

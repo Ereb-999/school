@@ -1,5 +1,6 @@
 package ru.hogwarts.school.controller;
 
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -54,6 +55,25 @@ public class StudentController {
     @GetMapping("/getAge")
     public ResponseEntity<Collection<Student>> getAge(@RequestParam Integer minAge, @RequestParam Integer maxAge){
         return ResponseEntity.ok(service.findAge(minAge, maxAge));
+    }
+
+    @GetMapping("/sortingA")
+    public ResponseEntity<Collection<String>> getNameStudentSortingA(){
+        Collection<String> stringCollection = service.getNameFilterA();
+        return ResponseEntity.ok(stringCollection);
+    }
+
+    @GetMapping("/StudentSortingAverageAge")
+    public Double studentSortingAverageAge(){return service.getStudentSortingAverageAge();}
+
+    @GetMapping("/print-parallel")
+    public void getStudentParallel() throws InterruptedException{
+        service.getStudentParallel();
+    }
+    @GetMapping("/print-synchronized")
+    public void getStudentSync() throws InterruptedException{
+        service.getStudentSync();
+
     }
 
 }
