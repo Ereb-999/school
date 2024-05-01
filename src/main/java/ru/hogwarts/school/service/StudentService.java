@@ -15,6 +15,4 @@ public interface StudentService {
     Double getStudentSortingAverageAge();
     void getStudentParallel() throws InterruptedException;
     void getStudentSync() throws InterruptedException;
-
 }
-

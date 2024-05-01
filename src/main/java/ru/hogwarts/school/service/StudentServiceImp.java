@@ -8,6 +8,7 @@ import ru.hogwarts.school.model.Student;
 import ru.hogwarts.school.repository.StudentRepository;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 
@@ -20,6 +21,8 @@ public class StudentServiceImp implements StudentService{
     public StudentServiceImp(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
+
+    private boolean  permission = false;
 
 
     @Override
@@ -84,10 +87,32 @@ public class StudentServiceImp implements StudentService{
         String studentName = studentRepository.getById(id).getName();
         System.out.println(studentName);
     }
-    private synchronized void printSync(Long id){
-        String studentName = studentRepository.getById(id).getName();
-        System.out.println(studentName);
+
+    private synchronized  void printSyncName1(Integer id, Integer id2, List<Student> students) {
+        while (permission){
+            try {
+                wait();
+            } catch (InterruptedException ex){ex.printStackTrace();}
+        }
+        System.out.println(students.get(id).getName());
+        System.out.println(students.get(id2).getName());
+        permission = true;
+        notify();
     }
+
+    private synchronized  void printSyncName2(Integer id, Integer id2, List<Student> students) {
+        while (!permission){
+            try {
+                wait();
+            } catch (InterruptedException ex){ex.printStackTrace();}
+        }
+        System.out.println(students.get(id).getName());
+        System.out.println(students.get(id2).getName());
+        permission = false;
+        notify();
+    }
+
+
 
     public void getStudentParallel(){
         Thread thread1 = new Thread(() ->{
@@ -106,18 +131,22 @@ public class StudentServiceImp implements StudentService{
         printNameStudent(4l);
     }
     public void getStudentSync(){
+        List<Student> studentsList = studentRepository.findAll();
+       System.out.println(studentsList.get(1).getName());
+        System.out.println(studentsList.get(2).getName());
         Thread thread = new Thread(() ->{
-           printSync(3L);
-           printSync(4L);
+          printSyncName1(3,4, studentsList);
         });
+        thread.setName("Thread: 1");
+
         Thread thread2 = new Thread(() ->{
-            printSync(5L);
-            printSync(6L);
+            printSyncName2(5,6, studentsList);
         });
-        printSync(1L);
-        printSync(2L);
-        thread.start();
+        thread2.setName("Thread: 2");
+
         thread2.start();
+        thread.start();
     }
+
 
 }
